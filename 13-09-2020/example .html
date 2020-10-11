@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+
+  /* position  
+    relative: là cái nền
+    absolute: để thành phần có thể nổi lên trên
+    fixed: đẻ cố định ở 1 vị trí nào đó trên screen (thẻ body)
+    sticky: để khi lăn chuột (scroll)
+	z-index: xếp tầng các thành phần
+	top: để cách lề trên
+	right: cách lề phải
+	bottom: cách lề dưới
+	left: các lề trái
+	
+	border-radius: bo tròn đường viền
+  */
+  
+  
+  /* 
+	các đơn vị cần tìm hiểu
+    1. px
+    2. %
+    3. em
+    4. rem
+    5. vh
+    6. vw
+   */
+  
+  
+  h2 {
+    color: green;
+    text-align: center;
+    position: sticky;
+    top: 0;
+  }
+
+  h2::after {
+    content: '';
+    display: block;
+    height: 5px;
+    margin: 20px auto 20px;
+    background-color: aqua;
+    width: 100px;
+  }
+
+  .menu-custom {
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu-custom span {
+    margin: 5px;
+  }
+
+  .main {
+    border: 1px solid aqua;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .custom-border {
+    border: 1px solid blue;
+    border-radius: 5px;
+  }
+
+  .custom-flex-grow {
+    flex: 1;
+  }
+
+  .custom-position {
+    background-color: aqua;
+    width: 300px;
+    height: 300px;
+    position: relative;
+  }
+
+  .custom-child-show {
+    background-color: bisque;
+    position: absolute;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    /* top: -5; */
+    right: -5;
+    bottom: 0;
+    /* left: -5; */
+    /* z-index: nó quy định vị xếp tầng */
+  }
+  .custom-fixed {
+    width: 40px;
+    background-color: aqua;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+
+  /* @media screen */
+</style>
+
+<body>
+  <div class="custom-fixed">Back top</div>
+  <!-- :befor dùng thêm 1 thành phần vào trước thành phần đang chọn -->
+  <!-- :after dùng để thêm 1 thành phần vào sau thành phần đang chọn -->
+  <h2>MY PORTFOLIO</h2>
+
+
+  <div class="menu-custom">
+    <span>ALL</span>
+    <span>WEB APP</span>
+    <span>JAVA</span>
+    <span>ALL</span>
+    <span>WEB APP</span>
+    <span>JAVA</span>
+  </div>
+
+  <!-- hiển thị các khối -->
+  <!-- flex: flex-grow flex-shrink -->
+  <div class="main">
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow">block 2</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow">block 2</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow">block 2</div>
+  </div>
+  <div class="main">
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow">block 2</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow">block 2</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow">block 2</div>
+  </div>
+
+  <div class="main">
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow">block 2</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow">block 2</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow">block 2</div>
+  </div>
+  <div class="main">
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow">block 2</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow">block 2</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow">block 2</div>
+  </div>
+  <div class="main">
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow">block 2</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow">block 2</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow">block 2</div>
+  </div>
+  <div class="main">
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow">block 2</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow">block 2</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow"> block 1</div>
+    <div class="custom-border custom-flex-grow">block 2</div>
+  </div>
+
+
+  <div class="custom-position">
+    <div class="custom-child-show"></div>
+  </div>
+
+
+</body>
+
+</html>

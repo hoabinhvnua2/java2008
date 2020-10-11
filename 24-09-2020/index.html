@@ -1,0 +1,170 @@
+<!-- 
+    Javascript là 1 ngôn ngữ lập trình kịch bản dựa trên tài liệu HTML
+    ví dụ đối tượng là inupt, click, keyup ...
+
+
+    1. biến và cách khai báo biến
+    biến là nơi dùng để quy định 1 giá trị nào đó;
+
+    var ten_bien;
+    var ten_biên = 1;
+    chữ hoa, chữ thường, số và kí tự đặc biệt _
+
+    2. Toán tử
+        2.1. Toán tử toán học
+            + - * / % ^ ++ -- 
+        2.2 Toán tử gán 
+            = += -+ *= /= %=
+        2.3 Toán tử quan hệ
+            && phép AND
+            || phép OR
+            == phép bằng
+            != phép khác
+            === so sánh giá trị và kiểu
+            !== so sánh khác giá trị và kiểu
+            >
+            < 
+            >=
+            <=
+            1 == '1' -> true
+            1 === '1' -> false
+
+    3 Lệnh rẽ nhánh 
+    if else
+
+    if() {}
+
+    if() {} else {}
+
+    if() {} else if() {} else {}
+
+    swirch( diều kiện) {
+        case 1: 
+            // làm gì đó
+            break;
+        case: 2
+            //
+            break;
+        default: 
+             là gì đó
+    4. Hàm
+        mỗi hàm chỉ thực 1 chức năng thôi 
+        function tên_hàm() {}
+
+        var tên_hàm = function(a, b = 0) {}
+
+        // param
+        // argument
+
+        có 2 loại liên tới tham số
+         thứ nhất là có tham số truyền vào
+         thứ hau là ko có tham số truyền vào
+
+
+        có loại hàm khi trả về
+         thứ nhát là hàm có kết quả trả về return
+         thứ là hàm không có kêt quả trả về ko có từ khóa return
+
+
+    5. Biến cục bộ và biến toàn cục
+        Biến toàn cục là biến ko khai báo trong 1 hàm cụ thr nào
+        biến cục bộ là biến mà được khai báo trong 1 hàm cụ thể nào đó
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        // có 1 chữ là userName
+        var userName = 'JAVA2008', age = 20, name = 'Trang';
+        var array = [1, 2, 3];
+        var _firstName = 'password';
+        // userName = 'Java2008';
+        // console.log()
+
+        // private và public
+
+        // undefine: tức đã khai báo nhưng chưa có giá trị
+        // not define: cái biến c chưa đc khai báo
+
+        console.log('Giá trị của biên userName: ', userName);
+        console.log('kiểu của biến: ', typeof userName);
+
+        // hàm alert dùng để show ra 1 popup, modal, dialog và đưa thông tin cho người đọc
+        // alert('Xìn chào các bạn lớp JAVA!');
+
+        // hàm prompt() dùng để cho người dùng tương tác
+        // prompt('Bạn có thích tôi ko?');
+
+        // confirm: show ra popup cho người dùng tương tác
+
+        // confirm('Bạn có muốn làm bái tập về nhà ko?');
+
+        // document.write: dùng để viết vào tài liệu html
+
+        document.write(userName);
+
+
+        var a = 5, b = 10;
+
+        console.log('phep toan ++ : ', ++a);
+        console.log('phep toan ++ : ', a++);
+
+
+        console.log('phep toan -- : ', --b);
+        console.log('phep toan -- : ', b--);
+        console.log(a += b);
+        console.log(a);
+        // tạo 1 biến có giá trị bằng 10, sau đó so sánh nếu bằng 10
+        // dùng showw ra console 1 đoạn text tùy ý
+        // ngược lại thì thống báo ra text lầ 'Chương trình kết thúc'
+
+
+        //  tao ra biến c có giá trị bằng 8 sử dựng switch case để
+        //  show ra 3 trường hợp
+        // 1 là bằng
+        // 2 là ko bằng
+        // 3 là default
+
+        function showUserName() {
+            console.log(userName);
+        }
+
+        function showA(x) {
+          return x;
+        }
+
+        var showName =  function(name) {
+            document.write(name);
+        }
+
+        // showUserName();
+        var kq = showA(a);
+        var tinhBMI = function() {
+            var bmi = 8;
+        }
+        
+
+        console.log('tôi là kq đây: ', kq)
+        showName('Xin chào Trang');
+
+
+        // tạo ra 1 hàm tính tổng, sau đó truyền vào hàm 2 thám số
+        // rồi tính tổng sau đó show ra màn hình
+
+        //  viết hàm tính chỉ số BMI của Minh và Toàn
+        //  so sánh giá trị và show kết quả ra tab console
+        // show ra MInh lớn hơn Toán or
+        // Toàn lớn hơn MInh
+        // Toàn bằng Minh
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+Bài 1: Tạo hàm tìm ra số nguyên tố có tham số truyền vào, sau đó log ra tab console số ... là số nguyên tố 
+và ngược lại số ... không là sô nguyên tố
+
+Kiến thức cần đọc trước
+	+ Vòng lặp
+	+ Events
+	+ Dom

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        /* div p {
+            color: red;
+        } */
+/* 
+        div p, h1, h2 {
+            color: green;
+        } */
+        /* div > p {
+            color: blue;
+        }
+
+        div+h1 {
+            color: green;
+        } */
+        /* id thì dùng # */
+        /*  1 id  = 10 class */
+        #que {
+            color: blue;
+        }
+        .que-quan:hover {
+            color: red;
+        }
+
+        /* class thì dung . */
+        /* .lop-hoc {
+            color: red;
+        } */
+        div p:first-child {
+            color: red;
+        }
+
+        div p:last-child {
+            color: blue;
+        }
+
+
+        .container {
+            display: flex;
+            border: 1px solid red;
+            /* justify-content: space-between; */
+            /* background-color: #e4d8d8; */
+            height: 100px;
+            flex-wrap: wrap;
+            align-content: center;
+            /* quy định các thành phần hiển thị trên 1 dòng hay đc xuống dòng */
+            
+        }
+        .container div {
+            height: 30px;
+            border: 1px solid green;
+            margin: 5px 0 5px;
+            padding: 10px;
+            color: #ffffff;
+            background-color: #00ff0f;
+            /* width: 33.33%; */
+            /* ví trí 1 là flex-grow, vị trí 2 là flex shrink */
+            /* flex: 1 1; */
+        }
+
+        .img-show {
+            /* 1. là %
+                2. là px
+                3. auto
+                4. vw chỉ sử dụng vs width
+                5. vh chỉ sử dụng vs height
+             */
+            /* width: 100%;
+            height: 100vh; */
+            /* background-image: url('./gettyimages-628292586-1-976x542-660-1599568525-549-width660height367.jpg'); */
+            /* background-repeat: no-repeat */
+            ;
+        }
+        /* margin có 4 cách đẻ viết 
+            dùng để tạo khoảng trắng giữa thành với cha của nó
+            1. là 1 chỉ số 10px (top right bottom left)
+            2. là 2 chỉ số 10px 5px (top bttom và left right)
+            3. là 3 chỉ số 5px 0 5px (top (left right) bottom)
+            4. 4 chỉ sô 10px 5px 5px 10px (top right bottom left)
+        */
+        /* padding 
+            tạo khoảng tráng cho chính nó
+            1. là 1 chỉ số 10px (top right bottom left)
+            2. là 2 chỉ số 10px 5px (top bttom và left right)
+            3. là 3 chỉ số 5px 0 5px (top (left right) bottom)
+            4. 4 chỉ sô 10px 5px 5px 10px (top right bottom left)*/
+        .o-3 {
+            order: -1;
+        }
+    </style>
+</head>
+<body>
+    <!-- alt + b -->
+    <!-- <div>
+        <p>Quê quán</p>
+        <p>Năm sinh</p>
+        <p>Giớ tính</p>
+    </div> -->
+<!-- nếu có 1 chứ nên viết thường -->
+<!-- nếu có 2 chữ trở lên đặt như sau lop-hoc-->
+    <!-- <h1 class="lop-hoc">Lớp JAva</h1>
+    <span class="que-quan">Quê quán</span> -->
+    <!-- <p>Giớ tính</p> -->
+<!-- tag01 tag02 -->
+<!-- section div p -->
+<!-- div > p -->
+    <!-- <section>
+        <p>Số đt</p>
+        <p>Nơi ở</p>
+        <div>
+            <p>Năm sinh</p>
+        </div>
+    </section> -->
+
+
+    <div class="container">
+        <div class="o-1">Quê quán</div>
+        <div class="o-2">Năm sinh</div>
+        <div class="o-3">Nơi sống</div>
+    </div>
+
+    <div class="img-show">
+    </div>
+</body>
+</html>

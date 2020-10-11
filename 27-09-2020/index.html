@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function ktSoNguyenTo(x) {
+        let e = 0;
+        / var f ; /;
+        if (x < 2) {
+          console.log("snt");
+        } else {
+          for (let index = 2; index < x - 1; index++) {
+            if (x % index == 0) {
+              e++;
+            }
+          }
+
+          if (e == 0) {
+            console.log("snt");
+          }
+          if (e != 0) {
+            console.log("knt");
+          }
+        }
+      }
+
+
+      ktSoNguyenTo(4);
+    </script>
+  </body>
+</html>
