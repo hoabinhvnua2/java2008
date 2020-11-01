@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    
+    <input type="text" class="form-control" id="them">
+    <button type="button" class="btn btn-primary mt-2" onclick="add()">thêm task</button>
+    <button type="button" class="btn btn-primary mt-2" onclick="update()">cap nhat</button>
+    <button type="button" class="btn btn-primary mt-2" onclick="deleteItem()">xoá task</button>
+    <small id="error" class="text-danger"></small>
+    <ul class="list-group" id="list"> 
+      </ul>
+      <script>
+          var c={};
+          var taskList=[];
+           var a;
+           var ind;
+           var nodeUl=document.getElementById("list");
+           if(JSON.parse(localStorage.getItem('task'))!=null){
+            taskList = JSON.parse(localStorage.getItem('task'));
+           }    
+        function comon(){
+            var str='';
+            var lengt=taskList.length;
+           console.log(nodeUl);
+                for(let index=0;index<lengt;index++)
+                {
+                    str +='<li class="list-group-item" onclick="get('+index+')">' + taskList[index] + '</li>';
+                } 
+          nodeUl.innerHTML=str;
+        }
+        comon();
+       
+        function get(index)
+        
+        {
+            debugger;
+            document.getElementById('task').value=taskList[index];
+            ind=index;
+            console.log(ind);
+        }
+          function add(){
+                a = document.getElementById("them").value;
+                taskList.push(a);
+                localStorage.setItem('task', JSON.stringify(taskList));
+                console.log(taskList);
+                comon();
+          }
+          function update()
+          {
+              if(checkRequire())
+              {
+                  var val=taskList[ind];
+                  val=getElementById("task").value;
+                  comon();
+                  localStorage.setItem('task',JSON.parse(taskList))
+                  return;
+              }
+              setTexterron("bạn phải chọn và điền thông tin đầy đủ");
+          }
+          function checkRequire(){
+        //var tasks=document.getElementById("task").value.trim();
+        $('#task').val($.trim($('#task').val()));
+        var tasks=$('#task').val();
+
+        return tasks != "";
+            }
+        function setTextError(text){
+                document.getElementById("error").innerText=text;
+            }
+            function deleteItem(){
+    if(checkRequire()){
+        document.getElementById("task").value="";
+        taskLists.splice(ind,1);
+        common();
+        localStorage.setItem('task',JSON.stringify(taskLists));
+        return;
+    }
+    setTextError("Bạn phải chọn hoặc nhập đầy đủ");
+}
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
