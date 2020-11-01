@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- to do list
+      tạo table để hiển thị bản ghi
+    --> 
+     <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">input here</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+            aria-describedby="basic-addon1" id="task">
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">input here</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+            aria-describedby="basic-addon1" id="task1">
+    </div>
+
+    
+
+    
+    <ul class="list-group mt-4" id="myList">
+        <li class="list-group-item">Heloo</li>
+        <li class="list-group-item">Heloo</li>
+    </ul>
+      
+      <button onclick="myFunction()">Try it</button>
+      
+      <p id="demo"></p>
+      
+      <script>
+      function myFunction() {
+        var task = document.getElementById('task').value + document.getElementById('task1').value;
+        var x = document.createElement("LI");
+        var t = document.createTextNode(task);
+        x.setAttribute('class','list-group-item');
+        x.appendChild(t);
+        document.getElementById("myList").appendChild(x);
+      }
+      </script>
+
+
+
+    <!-- <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">input here</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+            aria-describedby="basic-addon1" id="task">
+    </div>
+
+
+
+
+    
+    <p>Click the button to add a new element to the array.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+   <li id="demo"></li>
+
+    <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        var task = document.getElementById('task').value;
+        document.getElementById("demo").innerHTML = fruits;
+
+        function myFunction() {
+            fruits.push('dsdsd');
+            document.getElementById("demo").innerHTML = fruits;
+        }
+
+
+        function myFunction() {
+    fruits.push('dsdsd');
+    document.getElementById("demo").innerHTML = fruits;
+}
+
+    </script> -->
+  
+
+ 
+
+    <script src="./to-do-list.js"></script>
+</body>
+
+</html>
